@@ -115,6 +115,7 @@ export const RegisterFrom = () => {
           <Button
             typeof="submit"
             className="w-full"
+            disabled={isPending}
           >
             Create an account
           </Button>
