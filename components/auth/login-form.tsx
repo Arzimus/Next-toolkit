@@ -38,8 +38,8 @@ export const LoginFrom = () => {
     startTransition(() => (
       login(values)
         .then((data) => {
-          setError(data.error)
-          setSuccess(data.success)
+          setError(data?.error)
+          // setSuccess(data.success)
         })
     ))
 
@@ -98,6 +98,7 @@ export const LoginFrom = () => {
           <Button
             typeof="submit"
             className="w-full"
+            disabled={isPending}
           >
             Login
           </Button>

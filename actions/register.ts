@@ -2,7 +2,7 @@
 
 import { RegisterSchema } from "@/schema"
 import { z } from "zod"
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { db } from "@/lib/db"
 import { error } from "console"
 import { getUserByEmail } from "@/data/users"
