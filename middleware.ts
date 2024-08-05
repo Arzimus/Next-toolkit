@@ -26,14 +26,14 @@ export default auth((req): any => {
     console.log("here21")
     if (isLoggedIn) {
       console.log("here22")
-      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))
+      return NextResponse.redirect(new URL(DEFAULT_LOGIN_REDIRECT, req.url))
     }
     return null;
   }
 
   if (!isLoggedIn && !isPublicRoute) {
     console.log("here")
-    return Response.redirect(new URL("/auth/login", nextUrl))
+    return NextResponse.redirect(new URL("/auth/login", req.url))
   }
 
   return null;
